@@ -1,0 +1,11 @@
+<p>Verified Suggestions: </p>
+
+<div>
+    <ul *ngFor="let suggestion of SuggestionsService.verifiedSuggestions">
+        <span>{{suggestion.question}}</span>
+        <div>
+            <button (click)="removeSuggestion(suggestion.id)">Remove</button>
+            <button (click)="promoteSuggestion(suggestion.id)">Save</button>
+        </div>
+    </ul>
+</div>

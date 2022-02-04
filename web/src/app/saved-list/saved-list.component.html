@@ -1,0 +1,11 @@
+<p>Saved Suggestions: </p>
+
+<div>
+    <ul *ngFor="let suggestion of SuggestionsService.savedSuggestions">
+        <span>{{suggestion.question}}</span>
+        <div>
+            <button (click)="demoteSuggestion(suggestion.id)">Unsave</button>
+            <button (click)="removeSuggestion(suggestion.id)">Remove</button>
+        </div>
+    </ul>
+</div>
