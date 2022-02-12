@@ -8,7 +8,9 @@ import { suggestionObj } from './suggestion-model'
 })
 export class SuggestionsService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    setInterval(() => { this.updateLists() }, 2500)
+  }
 
   private getListURL = 'http://localhost:3000/api/getList'  // URL to web api
   private removeURL = 'http://localhost:3000/api/deleteSuggestion'  // URL to web api
